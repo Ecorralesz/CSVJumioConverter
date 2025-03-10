@@ -106,7 +106,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ file }) => {
   );
 
   return (
-    <div style={{ width: "90%", margin: "0 auto", overflowX: "hidden" }}>
+    <div style={{ width: "auto", margin: "0 auto", overflowX: "hidden" }}>
       {loading ? (
         // Show the spinner while loading
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
@@ -147,7 +147,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ file }) => {
             </div>
           </div>
 
-          <Table striped bordered hover responsive style={{ width: "100%", tableLayout: "fixed" }}>
+          <Table striped bordered hover responsive style={{ width: "auto", tableLayout: "fixed" }}>
             <thead>
               <tr>
                 {columns.map((col, idx) => (
