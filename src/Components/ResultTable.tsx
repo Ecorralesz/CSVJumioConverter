@@ -31,8 +31,18 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ file }) => {
   const formatDate = (date: string) => {
     const parsedDate = new Date(date);
     if (isNaN(parsedDate.getTime())) return ""; // Return an empty string for invalid dates
-    return parsedDate.toISOString().split("T")[0]; // This gives "YYYY-MM-DD" format
+  
+    return parsedDate.toLocaleString("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false, // Use 24-hour format
+    });
   };
+  
 
   useEffect(() => {
     const reader = new FileReader();
@@ -158,6 +168,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ file }) => {
                     if ((col.toLowerCase().includes("date") || col.toLowerCase().includes("timestamp")) && typeof cellValue === "string") {
                       displayValue = formatDate(cellValue);
                     }
+                    
 
                     if (col === "payload" && cellValue) {
                       const isExpanded = expandedRows.includes(rowIndex);
