@@ -30,6 +30,9 @@ body {
 }
 
 
+h2 {
+  color: #1db068;
+}
 .header-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
