@@ -53,7 +53,7 @@ const Home: React.FC = () => {
   </li>
   <li>
     <strong>Date Formatting:</strong> Automatically detects columns
-    named "timestamp" or "date" and formats them to the "YYYY-MM-DD"
+    named "timestamp" or "date" and formats them to the "YYYY-MM-DD HH:MM:SS"
     format, ensuring consistent and clean date output.
   </li>
   <li>
