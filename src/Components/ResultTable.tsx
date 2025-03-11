@@ -147,7 +147,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ file }) => {
             </div>
           </div>
 
-          <Table striped bordered hover responsive style={{ width: "auto", tableLayout: "fixed" }}>
+          <Table striped bordered hover responsive style={{ width: "100%", tableLayout: "fixed" }}>
             <thead>
               <tr>
                 {columns.map((col, idx) => (

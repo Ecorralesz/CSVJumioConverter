@@ -10,8 +10,8 @@ const Results: React.FC = () => {
   if (!file) {
     return (
       <Container className="text-center mt-5">
-        <h2>No File Uploaded</h2>
-        <Button onClick={() => navigate('/')} variant="primary">
+        <h1 className='mb-5'>No File Uploaded</h1>
+        <Button onClick={() => navigate('/')} className='jumio-button'>
           Go Back
         </Button>
       </Container>
